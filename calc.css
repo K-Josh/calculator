@@ -28,10 +28,10 @@ body {
     background: var(--calc-color);
     backdrop-filter: blur(4rem);
     box-shadow:  0 8px 16px rgba(0, 0, 0, 0.1);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     padding-bottom: 0.5rem;
-    width: 15rem;
+    width: 17rem;
 }
 
 .calculator form input {
@@ -125,16 +125,31 @@ form .display input {
     box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.43) inset;
 }
 .special__deg {
+    position: relative;
+    top: 2.8rem;
     color: #fff;
     font-size: 1rem;
     width: 2.7rem;
-    height: 1.7rem;
+    height: 1.9rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.39);
     background: var(--buttons-color);
     box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.43) inset;
 }
 .special__deg1 {
+    position: relative;
+    top: 3rem;
+    right: -1.4rem;
+    color: #19ACFF;
+    font-size: 1rem;
+    width: 2.5rem;
+    height: 1.7rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.39);
+    background-color: var(--buttons-color);
+    box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.43) inset;
+}
+.special__deg2 {
     position: relative;
     top: 3rem;
     right: 1.8rem;
@@ -144,7 +159,7 @@ form .display input {
     height: 1.7rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.39);
-    background: #19ACFF;
+    background: var(--buttons-color);
     box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.43) inset;
 }
 .end {

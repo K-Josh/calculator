@@ -14,15 +14,20 @@
                     <input type="text" id="display" readonly>
                 </div>
                 <div class="end">
-                    <input type="button" value="00" class="special__deg1" onclick="addDisplay('00')">
-                    <input type="button" value="(" class="special__deg1" onclick="addDisplay('(')">
-                    <input type="button" value=")" class="special__deg1" onclick="addDisplay(')')">
+                    <input type="button" value="M+" id="memory-store" class="special__deg1" onclick="memoryStore()">
+                    <input type="button" value="MR" id="memory-recall" class="special__deg1" onclick="memoryRecall()">
+                    <input type="button" value="MC" id="memory-clear" class="special__deg1" onclick="memoryClear()">
                 </div>
                 <div class="end">
                     <input type="button" value="AC" class="numbers1 end2__btn" onclick="clearDisplay()">
                     <input type="button" value="DE" class="numbers1 end2__btn" onclick="sliceDisplay()">
                     <input type="button" value="/" class="numbers1 end2__btn" onclick="addDisplay('/')">
                     <input type="button" value="deg" class="special__deg numbers1" id="display" onclick="toggleMode()">
+                </div>
+                <div class="end">
+                    <input type="button" value="00" class="special__deg2" onclick="addDisplay('00')">
+                    <input type="button" value="(" class="special__deg2" onclick="addDisplay('(')">
+                    <input type="button" value=")" class="special__deg2" onclick="addDisplay(')')">
                 </div>
                 <div class="end">
                     <input type="button" value="7" class="numbers end2__btn" onclick="addDisplay('7')">

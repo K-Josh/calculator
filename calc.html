@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" id="display" readonly>
+                </div>
+                <div class="end">
+                    <input type="button" value="00" class="special__deg1" onclick="addDisplay('00')">
+                    <input type="button" value="(" class="special__deg1" onclick="addDisplay('(')">
+                    <input type="button" value=")" class="special__deg1" onclick="addDisplay(')')">
+                </div>
+                <div class="end">
+                    <input type="button" value="AC" class="numbers1 end2__btn" onclick="clearDisplay()">
+                    <input type="button" value="DE" class="numbers1 end2__btn" onclick="sliceDisplay()">
+                    <input type="button" value="/" class="numbers1 end2__btn" onclick="addDisplay('/')">
+                    <input type="button" value="deg" class="special__deg numbers1" id="display" onclick="toggleMode()">
+                </div>
+                <div class="end">
+                    <input type="button" value="7" class="numbers end2__btn" onclick="addDisplay('7')">
+                    <input type="button" value="8" class="numbers end2__btn" onclick="addDisplay('8')">
+                    <input type="button" value="9" class="numbers end2__btn" onclick="addDisplay('9')">
+                    <input type="button" value="*" class="special" onclick="addDisplay('*')">
+                </div>
+                <div class="end">
+                    <input type="button" value="4" class="numbers end2__btn" onclick="addDisplay('4')">
+                    <input type="button" value="5" class="numbers end2__btn" onclick="addDisplay('5')">
+                    <input type="button" value="6" class="numbers end2__btn" onclick="addDisplay('6')">
+                    <input type="button" value="-" class="special" onclick="addDisplay('-')">
+                </div>
+                <div class="end1">
+                    <input type="button" value="1" class="numbers end1__btn" onclick="addDisplay('1')">
+                    <input type="button" value="2" class="numbers end1__btn" onclick="addDisplay('2')">
+                    <input type="button" value="3" class="numbers end1__btn" onclick="addDisplay('3')">
+                    <input type="button" value="+" class="plus" onclick="addDisplay('+')">
+                </div>
+                <div class="end">
+                    <input type="button" value="0" class="two__zeros" onclick="addDisplay('0')" >
+                    <input type="button" value="." class=" end__single__Zero" onclick="addDisplay('.')">
+                    <input type="button" value="=" onclick="calculate()" class="equal">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/calc.js"></script>
+</body>
+</html>

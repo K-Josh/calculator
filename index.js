@@ -4,27 +4,32 @@ const memoryStoreButton = document.getElementById('memory-store')
 const memoryRecallButton = document.getElementById("memory-recall");
 const memoryClearButton = document.getElementById("memory-clear");
 
+
 function addDisplay(input){
-    display.value += input;
-}
+    // Add pressed inputs into the display screen
+     display.textContent += input
+};
+
+//Limits the number of decimal points used
+function addDecimal(input){
+    if (!display.textContent.includes('.')) {
+     addDisplay(input)
+
+    }
+};
 
 function clearDisplay(){
-    display.value = "";
-}
+    display.textContent =  ''
+};
 
 function calculate(){
-    let expression = display.value
+    //Evaluate the string expression
     try{
-        display.value = eval(display.value);
-        let expression = document.getElementById("display").value;
-        let radians = expression.endsWith("°") ? eval(expression.slice(0, -1)) * Math.PI / 180 : eval(expression);
-        let result = Math.sin(radians); // Example using sine function
-        document.getElementById("display").value = result;
+          display.textContent = eval(display.textContent)  
     }
     catch(error){
-        display.value = "Error";
-    }
-}
+        display.textContent = "Error";
+    }}
 
 function toggleMode() {
     isDegreeMode = !isDegreeMode;
@@ -32,7 +37,8 @@ function toggleMode() {
 }
 
 function sliceDisplay() {
-    display.value = display.value.toString().slice(0,-1)
+    //Delete a number
+    display.textContent = display.textContent.slice(0,-1)
 }
 
 function memoryStore() {

@@ -3,6 +3,7 @@ const display = document.getElementById("display");
 const memoryStoreButton = document.getElementById('memory-store')
 const memoryRecallButton = document.getElementById("memory-recall");
 const memoryClearButton = document.getElementById("memory-clear");
+const date = document.getElementById('date')
 
 function addDisplay(input){
     display.value += input;
@@ -13,22 +14,12 @@ function clearDisplay(){
 }
 
 function calculate(){
-    let expression = display.value
     try{
         display.value = eval(display.value);
-        let expression = document.getElementById("display").value;
-        let radians = expression.endsWith("°") ? eval(expression.slice(0, -1)) * Math.PI / 180 : eval(expression);
-        let result = Math.sin(radians); // Example using sine function
-        document.getElementById("display").value = result;
     }
     catch(error){
         display.value = "Error";
     }
-}
-
-function toggleMode() {
-    isDegreeMode = !isDegreeMode;
-    document.getElementById("modeIndicator").textContent = isDegreeMode ? "Deg" : "Rad";
 }
 
 function sliceDisplay() {
@@ -47,4 +38,9 @@ function memoryRecall() {
 }
 function memoryClear() {
     localStorage.removeItem("calculatorMemory")
+}
+
+function date() {
+    let date = new Date().getFullYear()
+    return date()
 }
